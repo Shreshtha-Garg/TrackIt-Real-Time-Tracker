@@ -32,6 +32,12 @@ io.on('connection', (socket) => {
 app.get('/', (req, res) => {
     res.render('index');
 });
+//print home for /home route
+//do not render it just print "Home"
+app.get('/home', (req, res) => {
+    res.send("Home");
+});
+
 
 server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
